@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Store.Domain.Entities.Game>
+﻿@model Store.WebUI.Models.GamesListViewModel
 
 @{
     ViewBag.Title = "Товары";
 }
 
-@foreach (var p in @Model)
+@foreach (var p in @Model.Games)
 {
     <div>
         <h3>@p.Name</h3>
@@ -12,3 +12,7 @@
         <h4>@p.Price.ToString("# руб")</h4>
     </div>
 }
+
+<div>
+    @MyHelpers.PageLinks(Html, Model.PagingInfo)
+</div>

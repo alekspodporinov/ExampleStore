@@ -1,0 +1,15 @@
+﻿@using System.Web.Mvc.Html
+@using Store.WebUI.Models
+@helper PageLinks(System.Web.Mvc.HtmlHelper h, PagingInfo pagingInfo)
+{
+    for (int i = 1; i <= pagingInfo.TotalPages; i++)
+    {
+        if (i != pagingInfo.CurrentPage)
+        {
+
+            @h.ActionLink(@i.ToString(), "List", "Game", new {page = i}, new {@class = "selected btn-primary"})
+            continue;
+        }
+        @h.ActionLink(@i.ToString(), "List", "Game", new {page = i}, new {@class = "btn btn-default"})
+    }
+}
