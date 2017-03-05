@@ -79,10 +79,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IGameRepository.cs" />
+    <Compile Include="Abstract\IOrderProcessor.cs" />
     <Compile Include="ContextDB\EFDbContext.cs" />
     <Compile Include="ContextDB\EFGameRepository..cs" />
+    <Compile Include="EmailProcessor\EmailOrderProcessor.cs" />
+    <Compile Include="EmailProcessor\EmailSettings.cs" />
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Game.cs" />
+    <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
